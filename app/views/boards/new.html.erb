@@ -1,0 +1,27 @@
+<section id = "form">
+  <div class= "container">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h2>Edit User</h2>
+      </div>
+      <div class="panel-body">
+        <%= form_for :board, url: user_boards_path do |f| %>
+            <div class="form-group">
+              <%= f.label :title, class: "col-sm-2 control-label" %>
+              <div class="col-sm-4">
+                <%= f.text_field :title, class: "form-control", autofocus: true %>
+              </div><br />
+            </div><br />
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-4">
+                <%= f.submit "Create",class: "btn btn-default submit" %>
+              </div>
+            </div>
+        <% end %><br /><br />
+      </div>
+    </div>
+  </div>
+</section>
+
+          
+          

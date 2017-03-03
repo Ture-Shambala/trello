@@ -3,6 +3,10 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  # assosiations
+  has_many :board_users
+  has_many :users, through: :board_users
+  # callbacks
   after_create :send_welcome_mail
 
 

@@ -1,33 +1,9 @@
-<section class="trello">
-	<div class= "header-top">
-		<div class="container">
-			<div class="col-sm-2">
-				<%= image_tag("logo.png", size: "80x80", alt: "Trello") %>
-			</div>
-			<div class="col-sm-offset-6 col-sm-4 login-link">
-				<%= link_to 'Sign Up', new_user_registration_path, class: "button" %>
-				<div class="dropdown">
-				  <%= link_to 'Login', new_user_session_path, class: "button" %>
-				  <div class="dropdown-content">
-				    <% if current_user.present? %>
-				    	<%= link_to 'Edit Account',  edit_user_registration_path %>
-							<%= link_to 'Logout', destroy_user_session_path , method: :delete %>
-						<% end %>
-				  </div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row"> 
-		<div class="col-sm-4 col-sm-offset-3 box"> 
-			<h1>Trello lets you work more collaboratively and get more done.</h1><br />
-			<p>Trello’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible and rewarding way. </p><br />
-			<%= link_to 'Sign Up', new_user_registration_path, class: "button box1" %>
-		</div>   
-		<div class="box2 col-sm-4"> 
-			<p class="small">Already use Trello? 
-				<%= link_to 'Login', new_user_session_path, class: "button" %>
-			</p> 
-		</div>  
-	</div>
-</section>
+<% if current_user.present? %>
+	<%= current_user.name %>
+<% else %>
+  <%= current_user.email %>
+<% end%><br/>
+
+<%= link_to "Create a new board", new_user_board_path(current_user) %><br />
+
+<%= link_to "Back", root_path %>

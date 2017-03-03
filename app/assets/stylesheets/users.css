@@ -80,3 +80,9 @@
   background-color: #cccccc;
   height: 500px;
 }
+.sync-img{
+  background-image: url("https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/60dc711cb04607c6a8a0c55b045aeb6d/usecases-taco.jpg");
+  background-color: #cccccc;
+  height: 500px;
+  margin-top: -20px;
+}
