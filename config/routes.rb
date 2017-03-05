@@ -8,6 +8,7 @@ Trello::Application.routes.draw do
   # You can have the root of your site routed with "root"
   resources :users do
     resources :boards
+    resources :teams
   end
   root 'users#front_page'
 
