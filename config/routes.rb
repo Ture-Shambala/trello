@@ -1,4 +1,5 @@
 Trello::Application.routes.draw do
+  get "teams/index"
   get "board/index"
   get "users/index"
   devise_for :users

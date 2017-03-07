@@ -75,8 +75,8 @@
 .box2{
 	margin-top: 200px;
 }
-.row{
-	background-image: url("usecases-bg.jpg");
+.row1{
+	background-image: url("/assets/usecases-bg.jpg");
   background-color: #cccccc;
   height: 500px;
 }

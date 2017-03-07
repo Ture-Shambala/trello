@@ -1,0 +1,11 @@
+<p>
+  <b>Name:</b>
+  <%= @team.name %>
+</p>
+<p>
+  <b>Description:</b>
+  <%= @team.description %>
+</p>
+
+<%= link_to 'Edit', edit_user_team(@team) %> |
+<%= link_to 'Back', users_path %>

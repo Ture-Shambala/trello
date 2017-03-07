@@ -5,6 +5,7 @@ class BoardsController < ApplicationController
 
   def new
   	@board = Board.new
+  	@teams = Team.all
   end
 
   def create

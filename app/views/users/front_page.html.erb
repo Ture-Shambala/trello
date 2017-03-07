@@ -2,11 +2,11 @@
 	<div class= "header-top">
 		<div class="container">
 			<div class="col-sm-2">
-				<%= image_tag("logo.png", size: "80x80", alt: "Trello") %>
+				<%= image_tag("/assets/logo.png", size: "80x80", alt: "Trello") %>
 			</div>
-			<div class="col-sm-offset-6 col-sm-4 login-link">
+			<div class="col-sm-2 pull-right login-link">
 				<%= link_to 'Sign Up', new_user_registration_path, class: "button" %>
-				<div class="dropdown">
+				<div class="col-sm-2 pull-right dropdown">
 					<%= link_to 'Login', new_user_session_path, class: "button" %>
 					<div class="dropdown-content">
 						<% if current_user.present? %>
@@ -18,7 +18,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row"> 
+	<div class="row1"> 
 		<div class="col-sm-4 col-sm-offset-3 box"> 
 			<h1>Trello lets you work more collaboratively and get more done.</h1><br />
 			<p>Trello’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible and rewarding way. </p><br />
