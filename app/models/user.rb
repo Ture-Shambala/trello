@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   # assosiations
   has_many :board_users
-  has_many :users, through: :board_users
+  has_many :board, through: :board_users
+  has_many :team_users
+  has_many :teams, through: :team_users
   # callbacks
   after_create :send_welcome_mail
 

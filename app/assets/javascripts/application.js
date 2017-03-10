@@ -10,7 +10,7 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= jquery-3.1.1.min.js
+//= jquery-2.2.3.min.js
 //= require users.js
 //= require jquery
 //= require jquery_ujs

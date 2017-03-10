@@ -1,19 +1,21 @@
-<div class="col-sm-2 pull-right">
-	<% if current_user.present? %>
-		<%= current_user.name %>
-	<% end %>
-</div><br />
-<% @users.each do |user|%>
-	<% if current_user.id != user.id %>
-		<%= user.name %><br/>
-	<% end %>
+<% @teams.each do |team|%>
+	<div class= "">
+		<p class="text"><%= team.name %></p><br/>
+	</div>
+	<div class="container col-sm-4" style="margin-top: 150px;">
+		<div class="panel panel-default" style="height: 150px;">
+			<%# @users.each do |user|%>
+				<%# if current_user.id != user.id %>
+				<div class= "row">
+					<div class="col-sm-6" style="padding: 25px; margin-left: 4px;">
+						<%= link_to "Create a new board", new_user_board_path(current_user), class: "text" %><br />
+					</div><br />
+				</div>
+				<%# end %>
+			<%# end %>
+		</div>
+		<div class="col-sm-6">
+			<%= link_to "Create a new team", new_user_team_path(current_user), class: "text" %><br />
+		</div>
+	</div>
 <% end %>
-<div class= "row">
-	<div class="col-sm-4">
-		<%= link_to "Create a new board", new_user_board_path(current_user) %><br />
-	</div><br />
-	<div class="col-sm-4">
-		<%= link_to "Create a new team", new_user_team_path(current_user) %><br />
-	</div><br />
-</div>
-<%= link_to "Back", root_path %>

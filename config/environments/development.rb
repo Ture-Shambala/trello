@@ -6,6 +6,8 @@ Trello::Application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  # assets issue
+  config.serve_static_assets = false
   # Do not eager load code on boot.
   config.eager_load = false
 

@@ -2,6 +2,9 @@ class UsersController < ApplicationController
   
   def index
   	@users = User.all
+    @teams = Team.all
+    # binding.pry
+    # @boards = current_user.boards
   end
 
   def show

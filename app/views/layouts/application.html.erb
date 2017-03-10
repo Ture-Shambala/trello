@@ -2,14 +2,14 @@
 <html>
 <head>
   <title>Trello</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "/assets/jquery-3.1.1.min.js", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "/assets/application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "/assets/jquery-2.2.3.min.js", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "/assets/application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+	<%= render 'layouts/header.html' %>
 <%= yield %>
-
+	<%= render 'layouts/footer.html' %>
 </body>
 </html>

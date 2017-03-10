@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170305175305) do
+ActiveRecord::Schema.define(version: 20170310132615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "board_teams", force: true do |t|
+    t.integer  "board_id"
+    t.integer  "team_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "board_teams", ["board_id"], name: "index_board_teams_on_board_id", using: :btree
+  add_index "board_teams", ["team_id"], name: "index_board_teams_on_team_id", using: :btree
 
   create_table "board_users", force: true do |t|
     t.integer  "board_id"
@@ -30,6 +40,7 @@ ActiveRecord::Schema.define(version: 20170305175305) do
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "team_id"
   end
 
   create_table "team_users", force: true do |t|

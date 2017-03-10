@@ -1,0 +1,35 @@
+<header id="header"><!--header-->
+    <div class="header-middle" style="background-color: #00adff"><!--header-middle-->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="logo pull-left">
+              <%= link_to image_tag("/assets/logo.png", size: "80x80", alt: "Trello"), root_path %>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="shop-menu pull-right">
+              <ul class="nav navbar-nav">
+                <li class= "button" style="margin-top: 15px">
+                <% if user_signed_in? %>
+                  <%= link_to "#{current_user.name}.present?" ? "Login with: #{current_user.name}" : "Login with: #{current_user.email}", edit_user_registration_path, class: "link popup"  %>
+                    <!-- <div id="popover_content_wrapper" style="display: none">
+                      <ul> -->
+                        <!-- <li><%#= link_to 'Edit profile', edit_user_registration_path %></li> -->
+                        <li style="margin-top: 15px"><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "link" %></li>
+                     <!--  </ul>
+                    </div> -->
+                  </li>
+                <%#= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
+                <%#= link_to 'Addresses', addresses_path, :class => 'navbar-link' %>
+                <% else %>
+                  <li style="margin-top: 15px"><%= link_to "Sign up", new_user_registration_path, class: "link"  %></li>
+                  <li style="margin-top: 15px"><%= link_to 'Login'.html_safe, new_user_session_path, class: "link"  %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--/header-middle-->
+  </header>

@@ -1,11 +1,25 @@
-<p>
-  <b>Name:</b>
-  <%= @team.name %>
-</p>
-<p>
-  <b>Description:</b>
-  <%= @team.description %>
-</p>
-
-<%= link_to 'Edit', edit_user_team(@team) %> |
-<%= link_to 'Back', users_path %>
+<section id = "form">
+  <div class= "container">
+    <div class="col-sm-8 col-sm-offset-2 new_board">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 style="text-align: center;"><%= "#{current_user.name} created new team" %></h2>
+        </div>
+        <div class="panel-body">
+          <div class="col-sm-6 col-sm-offset-4">
+						<p>
+						  <b>Name:</b>
+						  <%= @team.name %>
+						</p>
+						<p>
+						  <b>Description:</b>
+						  <%= @team.description %>
+						</p>
+					<%= link_to 'Edit', edit_user_team_path(current_user,@team) %>
+					<%= link_to 'Back', users_path %>
+					</div>
+				</div>
+      </div>
+    </div>
+  </div>
+</section>
