@@ -5,7 +5,7 @@ class BoardsController < ApplicationController
 
   def new
   	@board = Board.new
-  	# @teams = Team.all
+  	@teams = Team.all
   	# @board_team = BoardTeam.new(teams: Team.all)
   end
 

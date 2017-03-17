@@ -16,11 +16,8 @@
               <div class="form-group">
                 <%= f.label :team, class: "col-sm-4 control-label", style: "text-align: center" %>
                 <div class="col-sm-6">
-                  <%# binding.pry %>
-                  <%= f.select :team, @teams.collect {|x| [x.name, x.id]}, {}, :multiple => true %>
-                  <%#= f.select team, options_for_status, {}, prompt: 'Select One' %>
-                  <%#= f.select :team, options_for_select([["Select One", ""], "Cell", "Work", "Office", "Home", "Other"]), :class => 'form-control' %>
-                  <%#= f.text_field :title, class: "form-control", autofocus: true %>
+                  <%=select_tag 'team', options_for_select(@teams.collect{ |u| [u.name, u.id] })%>
+                  <%#= select_tag :team, @teams.collect{ |u| [u.name, u.id]} %>
                 </div><br />
               </div><br />
               <div class="form-group">
