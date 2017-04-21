@@ -3,10 +3,10 @@
     <div class="col-sm-8 col-sm-offset-2 new_board">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h2 style="text-align: center;">Create Board</h2>
+          <h2>Edit Team</h2>
         </div>
         <div class="panel-body">
-          <%= form_for :board, url: user_boards_path do |f| %>
+          <%= form_for :board, url: user_board_path(current_user, @board),  method: :patch do |f| %>
               <div class="form-group">
                 <%= f.label :title, class: "col-sm-4 control-label", style: "text-align: center" %>
                 <div class="col-sm-6">
@@ -22,7 +22,7 @@
               </div><br />
               <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-4">
-                  <%= f.submit "Create",class: "btn btn-default submit" %>
+                  <%= f.submit "Update",class: "btn btn-default submit" %>
                 </div>
               </div>
           <% end %><br /><br />
@@ -31,6 +31,3 @@
     </div>
   </div>
 </section>
-
-          
-          

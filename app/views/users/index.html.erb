@@ -1,25 +1,27 @@
-<% @teams.each do |team|%>
-	<div class="container col-sm-4" style="margin-top: 150px;">
-		<div class="set-team" style="margin-bottom: 40px;">
-			<ul style="list-style-type: none;">
-				<li><p class="text"><%= team.name %></p></li>
-				<li><p class="text"><%= link_to "Members", "/users" %></p></li>
-				<li><p class="text"><%= link_to "Settings", "/#"%></p></li>
-			</ul>
-		</div>
-		<div class="panel panel-default" style="height: 150px;background-color: #00ffd0;">
-			<%# @users.each do |user|%>
-				<%# if current_user.id != user.id %>
-				<div class= "row">
-					<div class="col-sm-8" style="padding: 65px; margin-left: 4px;">
-						<%= link_to "Create a new board", new_user_board_path(current_user), class: "text" %><br />
-					</div><br />
-				</div>
+<section class="trello">
+	<% @teams.each do |team|%>
+		<div class="container col-sm-4" style="margin-top: 150px;">
+			<div class="set-team" style="margin-bottom: 40px;">
+				<ul style="list-style-type: none;">
+					<li><p class="text"><%= team.name %></p></li>
+					<li><p class="text"><%= link_to "Members", "/users" %></p></li>
+					<li><p class="text"><%= link_to "Settings", "/#"%></p></li>
+				</ul>
+			</div>
+			<div class="panel panel-default" style="height: 150px;background-color: #00ffd0;">
+				<%# @users.each do |user|%>
+					<%# if current_user.id != user.id %>
+					<div class= "row">
+						<div class="col-sm-8" style="padding: 65px; margin-left: 4px;">
+							<%= link_to "Create a new board", new_user_board_path(current_user), class: "text" %><br />
+						</div><br />
+					</div>
+					<%# end %>
 				<%# end %>
-			<%# end %>
+			</div>
 		</div>
+	<% end %>
+	<div class="col-sm-6">
+		<%= link_to "Create a new team", new_user_team_path(current_user), class: "text" %><br />
 	</div>
-<% end %>
-<div class="col-sm-6">
-	<%= link_to "Create a new team", new_user_team_path(current_user), class: "text" %><br />
-</div>
+</section>

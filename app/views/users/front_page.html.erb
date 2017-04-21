@@ -10,5 +10,17 @@
 				<%= link_to 'Login', new_user_session_path, class: "button" %>
 			</p> 
 		</div>  
+	</div><br>
+	<div class="row1">
+		<div class="col-sm-4 col-sm-offset-3 box"> 
+			<h1>Trello lets you work more collaboratively and get more done.</h1><br />
+			<p>Trello’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible and rewarding way. </p><br />
+			<%= link_to 'Create a Team', new_user_team_path(current_user), class: "button box1" %>
+		</div>   
+		<div class="box2 col-sm-4"> 
+			<p class="small">Already use Trello? 
+				<%= link_to 'Create a Board', new_user_board_path(current_user), class: "button" %>
+			</p> 
+		</div>  
 	</div>
 </section>
